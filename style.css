@@ -1,0 +1,60 @@
+/* Colors from docs/design/system/tokens.json. System fonts only: the page loads nothing from third parties. */
+:root {
+  color-scheme: light dark;
+  --bg: #f4f7f6;
+  --card: rgba(255, 255, 255, 0.80);
+  --ink: #0f2230;
+  --ink-muted: #465a66;
+  --lagoon: #0b6e67;
+  --line: rgba(15, 34, 48, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1418;
+    --card: rgba(16, 26, 31, 0.80);
+    --ink: #eef6f5;
+    --ink-muted: #a8bcc1;
+    --lagoon: #5ee0cf;
+    --line: rgba(255, 255, 255, 0.16);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+a { color: var(--lagoon); }
+
+.lang { text-align: end; font-size: 15px; }
+
+h1 { font-size: 30px; line-height: 1.25; margin: 16px 0 4px; }
+
+h2 { font-size: 20px; line-height: 1.35; margin: 32px 0 8px; }
+
+.meta { color: var(--ink-muted); font-size: 15px; margin: 0; }
+
+.summary {
+  margin-top: 24px;
+  padding: 4px 20px 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.summary h2 { margin-top: 16px; }
+
+ul { padding-inline-start: 22px; }
+
+li { margin: 6px 0; }
